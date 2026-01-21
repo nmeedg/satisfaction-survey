@@ -146,9 +146,5 @@ app.get("/api/stats", (req, res) => {
 
   res.json({ month, start, end, projects: rows, action_plan: actions });
 });
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
-  console.log("Web + API: http://localhost:3000");
-});
+export default app
 
