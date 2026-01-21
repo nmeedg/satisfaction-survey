@@ -146,5 +146,7 @@ app.get("/api/stats", (req, res) => {
 
   res.json({ month, start, end, projects: rows, action_plan: actions });
 });
-export default app
+const port = process.env.PORT || 3000
+
+app.listen(port, () => console.log("project started"))
 
